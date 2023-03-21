@@ -1,19 +1,19 @@
-# Manager de comenzi de Black Friday in Java
+# Black Friday command manager in Java
 
-Pornesc un ForkJoinPool la care adaug prin invoke Tema2.
+I start a ForkJoinPool to which I add Theme2 through an invoke.
 
-Tema2, in compute, porneste P Order Workers, intr-un ForkJoinPool. Workerul primeste un index. Tema2 asteapta join pe Order Workers.
+In the compute method of Tema2, I start P Order Workers in a ForkJoinPool. The worker receives an index. Theme2 waits for join on Order Workers.
 
 ## Order Workers
 
-Order Workerul citeste din fisierul de orders, orderurile care i-au fost asignate, modalitate detaliata in README_BONUS.
+The Order Worker reads from the orders file the orders assigned to it, in a detailed manner described in README_BONUS.
 
-Pentru fiecare order, deschide un numar de product workeri egal cu numarul de produse si ii da fiecaruia un indice. Acestui worker ii da fork.
+For each order, it opens a number of Product Workers equal to the number of products and gives each worker an index. The worker forks to the task.
 
-Asteapta join de ProductWorkers pe care i-a creeat pentru acest order. La final scrie in output ca a terminat acel order si trece la urmatorul.
+It waits for join from the Product Workers it has created for this order. At the end, it writes in the output that it has finished that order and moves on to the next one.
 
 ## Product Worker
 
-Cauta liniar in fisierul de products produsul care apartine de orderul asignat. Repeta operatia pana ajunge la produsul cu numarul indicelui pe care il are.
+It searches linearly in the products file for the product that belongs to the assigned order. It repeats the operation until it reaches the product with the index number it has.
 
-Scrie in fisierul de output informatiile despre produsul asignat.
+It writes in the output file the information about the assigned product.
