@@ -1,8 +1,8 @@
 # Black Friday command manager in Java
 
-I start a ForkJoinPool to which I add Theme2 through an invoke.
+I start a ForkJoinPool to which I add Tema2 through an invoke.
 
-In the compute method of Tema2, I start P Order Workers in a ForkJoinPool. The worker receives an index. Theme2 waits for join on Order Workers.
+In the compute method of Tema2, I start P Order Workers in a ForkJoinPool. The worker receives an index. Tema2 waits for join on Order Workers.
 
 ## Order Workers
 
